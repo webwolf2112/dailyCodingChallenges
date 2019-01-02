@@ -16,6 +16,7 @@ function findSumBrute(arr, sum) {
     return returnNumbers;
 }
 
+
 function findSumWithSet(arr, sum) {
     let seenNumbers = new Set();
     for(let val in arr) {
