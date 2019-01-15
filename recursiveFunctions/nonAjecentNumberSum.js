@@ -5,7 +5,9 @@
 //brute force
 
 function maxSum(arr) {
+	// This will be the max sum including the previous element
 	let included = arr[0];
+	// This will be the max sum including the previous element
 	let excluded = 0;
 	let execluded_new; 
     let i; 
