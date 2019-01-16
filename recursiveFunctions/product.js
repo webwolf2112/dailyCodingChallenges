@@ -7,3 +7,12 @@ function productOfArray(arr) {
     arr.splice(0, 2);
     return productOfArray(arr);
 }
+
+
+//Best solution
+function productOfArray(arr) {
+    if(arr.length === 0) {
+        return 1;
+    }
+    return arr[0] * productOfArray(arr.slice(1));
+}
