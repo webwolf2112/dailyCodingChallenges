@@ -29,71 +29,67 @@ function Node(value) {
 }
 
 function Linkedlist() {
-	var length = 0;
-	var head = null;
-
 	return {
+		head: null,
+		length: 0,
 		size: function() {
-			return length;
+			return this.length;
 		},
 		add: function(item) {
 			if(!item) return;
 
 			var node = new Node(item);
 
-			if(head) {
-				node.next = head;
+			if(this.head) {
+				node.next = this.head;
 			}
 
-			head = node;
+			this.head = node;
 			length ++;
 		},
 		delete: function(value) {
-			let curr = head;
+			let curr = this.head;
 
-			if(head.value === value) {
-				head = head.next;
+			if(this.head.value === value) {
+				this.head = this.head.next;
 				return;
 			}
 
 			while (curr) {
 				if (curr.next) {
 					next = curr.next;
-					length --;
+					this.length --;
 					break;
 				}
 			}
 			curr = curr.next;
 		},
-		 search: function(value) {
-      var curr = head;
-      var found = undefined;
+		search: function(value) {
+	      var curr = this.head;
+	      var found = undefined;
 
-      while (curr) {
-        if (curr.value === value) {
-          found = curr;
-          break;
-        }
+	      while (curr) {
+	        if (curr.value === value) {
+	          found = curr;
+	          break;
+	        }
 
-        curr = curr.next;
-      }
+	        curr = curr.next;
+	      }
 
-      return found;
-    },
-    get size() {
-      return length;
-    },
-    print: function() {
-      var result = [];
+	      return found;
+	    },
+	    print: function() {
+	      var result = [];
 
-      var curr = head;
-      while (curr) {
-        result.push(curr.value);
+	      var curr = head;
+	      while (curr) {
+	        result.push(curr.value);
 
-        curr = curr.next;
-      }
+	        curr = curr.next;
+	      }
 
-      return result;
-    }
+	      return result;
+	    }
 	}
 }
