@@ -1,3 +1,19 @@
+
+
+
+
 O(n)  The same as O(n + 2) || O(10n)  => I roughly translates into as long as it's all looping over the same n (no nested it will be O(n))
 
 O(n2)  -> N squared - occures with nested loops
+
+
+
+General Rules of Thumb:
+	
+	1) It's usually O(1) if it does the following:
+		
+		I) Arithmetic Operation
+		II) Variable Assignment
+		III) Accessing an Array by Index or Object by Key.  ex: testArrayOrObject['grabit_by_this_key']
+
+	2) In a loop the complexity is the length of the loop thies whatever complexity is in the loop
